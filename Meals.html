@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مطعم الأصدقاء | الوجبات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="CSS/style.css" />
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo"><i class="fas fa-utensils"></i> مطعم الأصدقاء</div>
+            <button class="hamburger" id="hamburger" aria-label="القائمة">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="home.html">الرئيسية</a></li>
+                <li><a href="AboutUs.html">من نحن</a></li>
+                <li><a href="Meals.html" class="active">الوجبات</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <div class="hero-content">
+            <h1><i class="fas fa-utensils"></i> قائمة الوجبات</h1>
+            <p>اختر ما يشتهيه قلبك — نحن الأفضل</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="section">
+
+            <!-- جدول الوجبات -->
+            <div class="meals-card fade-in">
+                <h3><i class="fas fa-list"></i> الوجبات المتاحة</h3>
+                <p class="meals-hint">
+                    ضع علامة ✔ في عمود <strong>"إظهار التفاصيل"</strong> لعرض تفاصيل الوجبة.
+                    ضع علامة ✔ في عمود <strong>"اختيار"</strong> لإضافة الوجبة لطلبك.
+                </p>
+
+                <div class="table-wrapper">
+                    <table id="mealsTable">
+                        <thead>
+                            <tr>
+                                <th>الرمز</th>
+                                <th>الصورة</th>
+                                <th>الوجبة</th>
+                                <th>السعر</th>
+                                <th>إظهار التفاصيل</th>
+                                <th>اختيار</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <!-- SF-001 -->
+                            <tr class="meal-row">
+                                <td><strong>SF-001</strong></td>
+                                <td><img class="meal-thumb" src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=200&q=75" alt="سمك بوري"></td>
+                                <td>وجبة سمك بوري مشوي لشخصين</td>
+                                <td>110,000 ل.س</td>
+                                <td><input type="checkbox" class="detail-check" data-id="SF-001"></td>
+                                <td><input type="checkbox" class="meal-check" data-id="SF-001" data-name="سمك بوري مشوي لشخصين" data-price="110000"></td>
+                            </tr>
+                            <tr class="detail-row" id="detail-SF-001">
+                                <td colspan="6">
+                                    <div class="detail-content">
+                                        <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&q=80" alt="سمك بوري">
+                                        <div class="detail-text">
+                                            <h4>وجبة سمك بوري مشوي لشخصين</h4>
+                                            <p><strong>المطبخ:</strong> المصري &nbsp;|&nbsp; <strong>تصنيف الطعام:</strong> مأكولات بحرية</p>
+                                            <strong>المكونات:</strong>
+                                            <ul>
+                                                <li>4 سمكات بوري أحمر، مغسول ومنظف</li>
+                                                <li>بضعة أوراق من الأوريجانو الطازج، مقطعة</li>
+                                                <li>1 ملعقة صغيرة من ملح الطعام</li>
+                                                <li>1 ملعقة صغيرة من الفلفل الأسود المطحون</li>
+                                            </ul>
+                                            <strong>الصلصة:</strong>
+                                            <ul>
+                                                <li>1 ملعقة كبيرة من زيت الزيتون</li>
+                                                <li>3 فصوص ثوم مقشرة ومقطعة بشكل ناعم</li>
+                                                <li>1 حبة فلفل أحمر طازج منزوعة البذور</li>
+                                                <li>6 حبات طماطم طرية، مفرومة</li>
+                                                <li>1/2 ليمونة معصورة</li>
+                                                <li>ضمة صغيرة من البقدونس الطازج المفروم</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- SF-002 -->
+                            <tr class="meal-row">
+                                <td><strong>SF-002</strong></td>
+                                <td><img class="meal-thumb" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200&q=75" alt="برغر"></td>
+                                <td>برغر اللحم الفاخر</td>
+                                <td>95,000 ل.س</td>
+                                <td><input type="checkbox" class="detail-check" data-id="SF-002"></td>
+                                <td><input type="checkbox" class="meal-check" data-id="SF-002" data-name="برغر اللحم الفاخر" data-price="95000"></td>
+                            </tr>
+                            <tr class="detail-row" id="detail-SF-002">
+                                <td colspan="6">
+                                    <div class="detail-content">
+                                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=80" alt="برغر">
+                                        <div class="detail-text">
+                                            <h4>برغر اللحم الفاخر</h4>
+                                            <p><strong>المطبخ:</strong> أمريكي &nbsp;|&nbsp; <strong>تصنيف:</strong> وجبات سريعة</p>
+                                            <ul>
+                                                <li>لحم بقري طازج مشوي على الفحم</li>
+                                                <li>جبنة شيدر ذائبة طازجة</li>
+                                                <li>صوص خاص + خس + طماطم + بصل</li>
+                                                <li>خبز برغر طري ومحمص</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- SF-003 -->
+                            <tr class="meal-row">
+                                <td><strong>SF-003</strong></td>
+                                <td><img class="meal-thumb" src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=200&q=75" alt="شاورما"></td>
+                                <td>شاورما الدجاج الملكية</td>
+                                <td>75,000 ل.س</td>
+                                <td><input type="checkbox" class="detail-check" data-id="SF-003"></td>
+                                <td><input type="checkbox" class="meal-check" data-id="SF-003" data-name="شاورما الدجاج الملكية" data-price="75000"></td>
+                            </tr>
+                            <tr class="detail-row" id="detail-SF-003">
+                                <td colspan="6">
+                                    <div class="detail-content">
+                                        <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=400&q=80" alt="شاورما">
+                                        <div class="detail-text">
+                                            <h4>شاورما الدجاج الملكية</h4>
+                                            <p><strong>المطبخ:</strong> شرقي &nbsp;|&nbsp; <strong>تصنيف:</strong> مشاوي</p>
+                                            <ul>
+                                                <li>دجاج متبل بخلطة البهارات السرية</li>
+                                                <li>ثوم كريمي طازج + مخلل</li>
+                                                <li>بطاطا مقلية ذهبية</li>
+                                                <li>خبز عربي طازج من الفرن</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- SF-004 -->
+                            <tr class="meal-row">
+                                <td><strong>SF-004</strong></td>
+                                <td><img class="meal-thumb" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=200&q=75" alt="بيتزا"></td>
+                                <td>بيتزا إيطالية ساخنة</td>
+                                <td>110,000 ل.س</td>
+                                <td><input type="checkbox" class="detail-check" data-id="SF-004"></td>
+                                <td><input type="checkbox" class="meal-check" data-id="SF-004" data-name="بيتزا إيطالية" data-price="110000"></td>
+                            </tr>
+                            <tr class="detail-row" id="detail-SF-004">
+                                <td colspan="6">
+                                    <div class="detail-content">
+                                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&q=80" alt="بيتزا">
+                                        <div class="detail-text">
+                                            <h4>بيتزا إيطالية ساخنة</h4>
+                                            <p><strong>المطبخ:</strong> إيطالي &nbsp;|&nbsp; <strong>تصنيف:</strong> معجنات</p>
+                                            <ul>
+                                                <li>عجينة إيطالية طازجة مُخمّرة</li>
+                                                <li>صلصة طماطم طبيعية بالأعشاب</li>
+                                                <li>جبنة موزاريلا سخية ذائبة</li>
+                                                <li>إضافات حسب الطلب</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- SF-005 -->
+                            <tr class="meal-row">
+                                <td><strong>SF-005</strong></td>
+                                <td><img class="meal-thumb" src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=200&q=75" alt="دجاج مشوي"></td>
+                                <td>دجاج مشوي متبل</td>
+                                <td>90,000 ل.س</td>
+                                <td><input type="checkbox" class="detail-check" data-id="SF-005"></td>
+                                <td><input type="checkbox" class="meal-check" data-id="SF-005" data-name="دجاج مشوي متبل" data-price="90000"></td>
+                            </tr>
+                            <tr class="detail-row" id="detail-SF-005">
+                                <td colspan="6">
+                                    <div class="detail-content">
+                                        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=400&q=80" alt="دجاج مشوي">
+                                        <div class="detail-text">
+                                            <h4>دجاج مشوي متبل</h4>
+                                            <p><strong>المطبخ:</strong> شرقي &nbsp;|&nbsp; <strong>تصنيف:</strong> مشاوي</p>
+                                            <ul>
+                                                <li>دجاج كامل مقطّع بتتبيلة الأعشاب والليمون</li>
+                                                <li>مشوي على الفحم الطبيعي</li>
+                                                <li>يقدم مع خضروات مشوية وثوم</li>
+                                                <li>يكفي شخصين</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- SF-006 -->
+                            <tr class="meal-row">
+                                <td><strong>SF-006</strong></td>
+                                <td><img class="meal-thumb" src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=200&q=75" alt="ستيك"></td>
+                                <td>ستيك لحم فاخر</td>
+                                <td>160,000 ل.س</td>
+                                <td><input type="checkbox" class="detail-check" data-id="SF-006"></td>
+                                <td><input type="checkbox" class="meal-check" data-id="SF-006" data-name="ستيك لحم فاخر" data-price="160000"></td>
+                            </tr>
+                            <tr class="detail-row" id="detail-SF-006">
+                                <td colspan="6">
+                                    <div class="detail-content">
+                                        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400&q=80" alt="ستيك">
+                                        <div class="detail-text">
+                                            <h4>ستيك لحم فاخر</h4>
+                                            <p><strong>المطبخ:</strong> أمريكي &nbsp;|&nbsp; <strong>تصنيف:</strong> لحوم</p>
+                                            <ul>
+                                                <li>لحم بقري من أفضل القطع</li>
+                                                <li>مشوي حسب درجة النضج المطلوبة</li>
+                                                <li>يقدم مع صلصة الفطر الكريمية</li>
+                                                <li>مع بطاطا وسلطة جانبية</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- SF-007 -->
+                            <tr class="meal-row">
+                                <td><strong>SF-007</strong></td>
+                                <td><img class="meal-thumb" src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=200&q=75" alt="ناغتس"></td>
+                                <td>ناغتس دجاج ذهبية</td>
+                                <td>65,000 ل.س</td>
+                                <td><input type="checkbox" class="detail-check" data-id="SF-007"></td>
+                                <td><input type="checkbox" class="meal-check" data-id="SF-007" data-name="ناغتس دجاج ذهبية" data-price="65000"></td>
+                            </tr>
+                            <tr class="detail-row" id="detail-SF-007">
+                                <td colspan="6">
+                                    <div class="detail-content">
+                                        <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&q=80" alt="ناغتس">
+                                        <div class="detail-text">
+                                            <h4>ناغتس دجاج ذهبية</h4>
+                                            <p><strong>المطبخ:</strong> أمريكي &nbsp;|&nbsp; <strong>تصنيف:</strong> وجبات سريعة</p>
+                                            <ul>
+                                                <li>دجاج طازج 100% مقرمش</li>
+                                                <li>تغليف ذهبي هش ولذيذ</li>
+                                                <li>تقدم مع صلصة الهني ماستارد</li>
+                                                <li>12 قطعة لكل حصة</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- SF-008 -->
+                            <tr class="meal-row">
+                                <td><strong>SF-008</strong></td>
+                                <td><img class="meal-thumb" src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=200&q=75" alt="سلطة"></td>
+                                <td>سلطة فريش صحية</td>
+                                <td>35,000 ل.س</td>
+                                <td><input type="checkbox" class="detail-check" data-id="SF-008"></td>
+                                <td><input type="checkbox" class="meal-check" data-id="SF-008" data-name="سلطة فريش صحية" data-price="35000"></td>
+                            </tr>
+                            <tr class="detail-row" id="detail-SF-008">
+                                <td colspan="6">
+                                    <div class="detail-content">
+                                        <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&q=80" alt="سلطة">
+                                        <div class="detail-text">
+                                            <h4>سلطة فريش صحية</h4>
+                                            <p><strong>المطبخ:</strong> متوسطي &nbsp;|&nbsp; <strong>تصنيف:</strong> خضروات صحية</p>
+                                            <ul>
+                                                <li>خضروات طازجة موسمية مقطعة</li>
+                                                <li>تتبيلة زيت الزيتون والليمون</li>
+                                                <li>جبنة فيتا ، زيتون، وأعشاب</li>
+                                                <li>مغذية ومنعشة وخفيفة</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- SF-009 -->
+                            <tr class="meal-row">
+                                <td><strong>SF-009</strong></td>
+                                <td><img class="meal-thumb" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=200&q=75" alt="برغر دجاج"></td>
+                                <td>برغر دجاج كرسبي</td>
+                                <td>85,000 ل.س</td>
+                                <td><input type="checkbox" class="detail-check" data-id="SF-009"></td>
+                                <td><input type="checkbox" class="meal-check" data-id="SF-009" data-name="برغر دجاج كرسبي" data-price="85000"></td>
+                            </tr>
+                            <tr class="detail-row" id="detail-SF-009">
+                                <td colspan="6">
+                                    <div class="detail-content">
+                                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=80" alt="برغر دجاج">
+                                        <div class="detail-text">
+                                            <h4>برغر دجاج كرسبي</h4>
+                                            <p><strong>المطبخ:</strong> أمريكي &nbsp;|&nbsp; <strong>تصنيف:</strong> وجبات سريعة</p>
+                                            <ul>
+                                                <li>فيليه دجاج كرسبي مقرمش</li>
+                                                <li>مايونيز خاص + طماطم + خس</li>
+                                                <li>جبنة شيدر + مخلل</li>
+                                                <li>خبز برغر طري محمص</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- SF-010 -->
+                            <tr class="meal-row">
+                                <td><strong>SF-010</strong></td>
+                                <td><img class="meal-thumb" src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=200&q=75" alt="بطاطا مشوية"></td>
+                                <td>بطاطا مقلية مقرمشة</td>
+                                <td>30,000 ل.س</td>
+                                <td><input type="checkbox" class="detail-check" data-id="SF-010"></td>
+                                <td><input type="checkbox" class="meal-check" data-id="SF-010" data-name="بطاطا مقلية مقرمشة" data-price="30000"></td>
+                            </tr>
+                            <tr class="detail-row" id="detail-SF-010">
+                                <td colspan="6">
+                                    <div class="detail-content">
+                                        <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=400&q=80" alt="بطاطا">
+                                        <div class="detail-text">
+                                            <h4>بطاطا مقلية مقرمشة</h4>
+                                            <p><strong>المطبخ:</strong> عالمي &nbsp;|&nbsp; <strong>تصنيف:</strong> مقبلات</p>
+                                            <ul>
+                                                <li>بطاطا طبيعية مقطعة يدوياً</li>
+                                                <li>مقلية بزيت نباتي نقي</li>
+                                                <li>تقدم ساخنة مع كاتشب وصلصة</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="text-center mt-2">
+                    <button class="btn primary" id="btnContinue" onclick="showOrderForm()">
+                        متابعة &larr;
+                    </button>
+                </div>
+            </div>
+
+            <!-- نموذج الطلب -->
+            <div id="orderForm" class="meals-card">
+                <h3><i class="fas fa-clipboard-list"></i> نموذج الطلب</h3>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="fullName">الاسم الكامل <span style="font-size:0.8rem;color:#95a5a6">(أحرف عربية فقط)</span></label>
+                        <input type="text" id="fullName" placeholder="أدخل الاسم بالعربية">
+                        <div class="error-msg" id="err-fullName">الاسم يجب أن يحتوي على أحرف عربية فقط</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nationalId">الرقم الوطني <span class="required">*</span></label>
+                        <input type="text" id="nationalId" placeholder="11 خانة — مثال: 01234567890" maxlength="11">
+                        <div class="error-msg" id="err-nationalId">11 خانة، والخانتان الأوليان بين 01 و 14</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birthDate">تاريخ الميلاد</label>
+                        <input type="date" id="birthDate">
+                        <div class="error-msg" id="err-birthDate">يرجى إدخال تاريخ ميلاد صحيح وماضٍ</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mobile">رقم الموبايل</label>
+                        <input type="text" id="mobile" placeholder="093xxxxxxx أو 011xxxxxxx" maxlength="10">
+                        <div class="error-msg" id="err-mobile">يجب أن يتبع Syriatel (093,094,095) أو MTN (096,098,099) أو خط أرضي (011)</div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="email">البريد الإلكتروني</label>
+                        <input type="email" id="email" placeholder="example@email.com">
+                        <div class="error-msg" id="err-email">يرجى إدخال بريد إلكتروني صحيح</div>
+                    </div>
+                </div>
+
+                <hr class="separator">
+
+                <div class="text-center">
+                    <button class="btn primary" onclick="submitOrder()">إرسال الطلب ✓</button>
+                    &nbsp;&nbsp;
+                    <button class="btn secondary-dark" onclick="cancelOrder()">إلغاء</button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 مطعم الأصدقاء | جميع الحقوق محفوظة لفريق العمل</p>
+    </footer>
+
+    <!-- نافذة نتيجة الطلب -->
+    <div class="modal-overlay" id="resultModal">
+        <div class="modal-box">
+            <h3>✅ تفاصيل طلبك</h3>
+            <div id="modalContent"></div>
+            <button class="btn primary modal-close" onclick="closeModal()">إغلاق</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="JS/myFunctions.js"></script>
+</body>
+</html>
